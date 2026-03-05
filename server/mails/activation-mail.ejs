@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LMS Account Activation</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo h2 {
+      margin: 0;
+      color: #2c3e50;
+    }
+
+    .title {
+      text-align: center;
+      color: #333;
+    }
+
+    .content {
+      margin-top: 20px;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .code-box {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .activation-code {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 22px;
+      letter-spacing: 4px;
+      background-color: #4f46e5;
+      color: #ffffff;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="logo">
+      <h2>Your LMS</h2>
+    </div>
+
+    <h3 class="title">Activate Your Account</h3>
+
+    <div class="content">
+      <p>Hello <strong><%= user.name %></strong>,</p>
+
+      <p>
+        Thank you for registering to our Learning Management System.
+        Please use the activation code below to verify your account.
+      </p>
+
+      <div class="code-box">
+        <div class="activation-code">
+          <%= activationCode %>
+        </div>
+      </div>
+
+      <p>
+        This code will expire in <strong>15 minutes</strong>.
+      </p>
+
+      <p>
+        If you did not create this account, you can safely ignore this email.
+      </p>
+
+      <p>
+        Best regards,<br />
+        The LMS Team
+      </p>
+    </div>
+
+    <div class="footer">
+      © <%= new Date().getFullYear() %> Your LMS. All rights reserved.
+    </div>
+
+  </div>
+</body>
+</html>

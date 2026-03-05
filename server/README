@@ -1,0 +1,155 @@
+This application uses a JWT-based authentication system with
+access tokens, refresh tokens, and Redis session storage for
+enhanced security and scalability.
+
+Overview
+
+The authentication flow consists of:
+
+User registration with email activation
+
+Login with access & refresh token generation
+
+Secure cookie-based token storage
+
+Redis-backed session management
+
+Role-based authorization
+
+Token refresh mechanism
+
+Logout with session invalidation
+
+Token Architecture
+
+1️⃣ Access Token
+
+Short-lived (e.g., 5 minutes)
+
+Stored in HTTP-only cookie
+
+Used to access protected routes
+
+Signed with ACCESS_TOKEN_SECRET
+
+2️⃣ Refresh Token
+
+Longer-lived (e.g., 20 minutes)
+
+Stored in HTTP-only cookie
+
+Used to generate new access tokens
+
+Signed with REFRESH_TOKEN_SECRET
+
+Security Features
+
+HTTP-only cookies (prevents XSS token theft)
+
+Role-based authorization
+
+Server-side session validation
+
+Token expiration enforcement
+
+Email-based account activation
+
+Secure environment variable secrets
+
+Tech Used
+
+Node.js
+
+Express
+
+JWT (jsonwebtoken)
+
+Redis (ioredis)
+
+MongoDB (Mongoose)
+
+bcrypt (password hashing)
+
+LMS Backend
+
+This is the backend API for a Learning Management System (LMS). It provides all the core functionalities for managing users, courses, categories, layouts, notifications, orders, and analytics. Built with Node.js, Express, and MongoDB, it’s designed to be secure, scalable, and easy to integrate with a frontend application.
+
+Features
+
+User Management
+
+Register, login, and authenticate users
+
+Role-based access control (admin, instructor, student)
+
+Profile management
+
+Course Management
+
+Create, update, and delete courses
+
+Assign courses to categories
+
+Track course progress and enrollment
+
+Layout & CMS
+
+Manage homepage layouts including banners, FAQs, and categories
+
+Dynamic content updates via admin panel
+
+Notifications
+
+Push notifications to users when new courses or updates are added
+
+Orders & Payments
+
+Manage course purchases
+
+Track order history
+
+Analytics
+
+Track course enrollments, revenue, and user activity
+
+Generate monthly and yearly reports
+
+Cloud Integration
+
+Upload and manage images with Cloudinary
+
+Secure file storage for banners and course content
+
+Caching
+
+Redis caching for faster data access
+
+Error Handling & Validation
+
+Centralized error handler
+
+Input validation for all APIs
+
+Security
+
+JWT-based authentication
+
+Role-based authorization
+
+Secure password storage with hashing
+
+Tech Stack
+
+Backend: Node.js, Express
+
+Database: MongoDB, Mongoose
+
+Authentication: JWT
+
+File Storage: Cloudinary
+
+Caching: Redis
+
+Validation & Security: express-validator, bcrypt
+
+Dev Tools: TypeScript, ESLint, Prettier

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Confirmation - LMS</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      color: #2c3e50;
+      margin: 0;
+    }
+
+    .content {
+      font-size: 16px;
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    .order-box {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f8f9fa;
+      border-radius: 6px;
+    }
+
+    .order-box p {
+      margin: 6px 0;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #4CAF50;
+      color: #ffffff !important;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 13px;
+      color: #888888;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="header">
+      <h1>🎉 Order Confirmed!</h1>
+    </div>
+
+    <div class="content">
+      <p>Hi <strong><%= user.name %></strong>,</p>
+
+      <p>Thank you for your purchase! Your order has been successfully processed.</p>
+
+      <div class="order-box">
+        <p><strong>Order ID:</strong> <%= order._id %></p>
+        <p><strong>Course:</strong> <%= order.name %></p>
+        <p><strong>Price:</strong> $<%= order.price %></p>
+      </div>
+
+      <p>You now have full access to the course. Start learning today!</p>
+
+      <div class="button-container">
+        <a href="https://your-lms-domain.com/my-courses" class="button">
+          Go to My Courses
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>If you have any questions, feel free to contact our support team.</p>
+      <p>© <%= new Date().getFullYear() %> LMS Platform. All rights reserved.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
